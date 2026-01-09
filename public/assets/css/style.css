@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
-    --primary: #2C2420; /* Deep Walnut */
-    --secondary: #A68B6A; /* Brass/Oak */
-    --accent: #D9C5B2; /* Light Sand */
-    --bg: #F9F7F5; /* Off White */
+    --primary: #2C2420;
+    /* Deep Walnut */
+    --secondary: #A68B6A;
+    /* Brass/Oak */
+    --accent: #D9C5B2;
+    /* Light Sand */
+    --bg: #F9F7F5;
+    /* Off White */
     --text: #1A1A1A;
     --text-light: #555555;
     --white: #FFFFFF;
-    
+
     --font-serif: "Playfair Display", serif;
     --font-sans: "Plus Jakarta Sans", sans-serif;
-    
+
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    --shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -30,7 +34,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-serif);
     font-weight: 700;
 }
@@ -81,12 +88,15 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 5%;
+    padding: 20px 5%;
+    /* Reduzido levemente para evitar ocupar muito espaço */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
     transition: var(--transition);
+    min-height: 80px;
+    /* Garante altura mínima para cálculos */
 }
 
 nav.scrolled {
@@ -110,7 +120,8 @@ nav.scrolled {
 }
 
 .nav-links a {
-    color: white; /* Cor inicial no Hero */
+    color: white;
+    /* Cor inicial no Hero */
     font-weight: 500;
     font-size: 0.95rem;
 }
@@ -166,22 +177,33 @@ nav .logo {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    /* Mudado de height para min-height para acomodar conteúdo que cresce */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/hero.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero.png') no-repeat center center/cover;
     color: var(--white);
-    padding: 0;
+    padding: 80px 20px;
+    /* Adicionado padding para garantir respiro nas bordas em zooms */
+}
+
+.hero-content {
+    padding-top: 100px;
+    /* Garante que o texto comece abaixo da navbar */
+    max-width: 900px;
+    width: 90%;
 }
 
 .hero-content h1 {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    /* Fonte responsiva que se ajusta ao zoom/tela */
     margin-bottom: 20px;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s forwards 0.5s;
+    line-height: 1.1;
 }
 
 .hero-content p {
@@ -231,7 +253,7 @@ nav .logo {
     left: 0;
     width: 100%;
     padding: 40px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: var(--white);
     transform: translateY(20px);
     opacity: 0;
@@ -265,7 +287,8 @@ nav .logo {
     font-size: 0.9rem;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
@@ -273,7 +296,8 @@ nav .logo {
     transition: var(--transition);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: var(--secondary);
     outline: none;
 }
@@ -303,9 +327,11 @@ nav .logo {
     .hero-content h1 {
         font-size: 3rem;
     }
+
     .quote-container {
         grid-template-columns: 1fr;
     }
+
     .nav-links {
         display: none;
     }
