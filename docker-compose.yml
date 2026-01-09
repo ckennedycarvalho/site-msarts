@@ -1,0 +1,17 @@
+services:
+  msarts-app:
+    build: .
+    container_name: msarts-app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+    networks:
+      - npm-network
+
+networks:
+  npm-network:
+    external: true # Assumindo que o Nginx Proxy Manager está na mesma rede
