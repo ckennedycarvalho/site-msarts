@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  msarts-engine:
+    image: node:20-slim
+    container_name: msarts-engine
+    restart: always
+    working_dir: /app
+    volumes:
+      # MAPEIA a pasta da sua VM para dentro do motor do Node
+      - /home/msarts:/app 
+    command: sh -c "npm install && node server.js"
+    environment:
+      - PORT=3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.msarts.rule=Host(`msarts.routerkencarv.duckdns.org`)"
+      - "traefik.http.routers.msarts.entrypoints=websecure"
+      - "traefik.http.routers.msarts.tls.certresolver=myresolver"
+      - "traefik.http.services.msarts.loadbalancer.server.port=3000"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
