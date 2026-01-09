@@ -322,6 +322,41 @@ nav .logo {
     bottom: 0;
 }
 
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1500;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #20b857;
+    color: #fff;
+}
+
+.social-link {
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.social-link:hover {
+    color: var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-content h1 {

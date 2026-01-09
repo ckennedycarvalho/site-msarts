@@ -111,6 +111,11 @@
                         <i data-lucide="mail" style="color: var(--secondary);"></i>
                         <span>contato@msarts.com.br</span>
                     </div>
+                    <div style="display: flex; gap: 20px; align-items: center; margin-top: 15px;">
+                        <i data-lucide="instagram" style="color: var(--secondary);"></i>
+                        <a href="https://www.instagram.com/marcenariamsarts" target="_blank"
+                            class="social-link">@marcenariamsarts</a>
+                    </div>
                 </div>
                 <form id="quote-form">
                     <!-- Campo Honeypot (Invisível para humanos) -->
@@ -151,10 +156,31 @@
     </section>
 
     <!-- Footer -->
-    <footer style="padding: 50px 5%; background: var(--primary); color: rgba(255,255,255,0.6); text-align: center;">
-        <div class="logo" style="color: white; margin-bottom: 20px;">MSARTS</div>
-        <p>&copy; 2026 MSARTS Marcenaria. Todos os direitos reservados.</p>
+    <footer style="padding: 60px 5%; background: var(--primary); color: rgba(255,255,255,0.7); text-align: center;">
+        <div class="logo" style="color: white; margin-bottom: 25px; font-size: 2rem;">MSARTS</div>
+        <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px;">
+            <a href="https://www.instagram.com/marcenariamsarts" target="_blank"
+                style="color: white; transition: 0.3s; opacity: 0.8;" onmouseover="this.style.opacity=1"
+                onmouseout="this.style.opacity=0.8">
+                <i data-lucide="instagram" size="24"></i>
+            </a>
+            <a href="https://wa.me/5511999999999" target="_blank" style="color: white; transition: 0.3s; opacity: 0.8;"
+                onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">
+                <i data-lucide="message-circle" size="24"></i>
+            </a>
+            <a href="mailto:contato@msarts.com.br" style="color: white; transition: 0.3s; opacity: 0.8;"
+                onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">
+                <i data-lucide="mail" size="24"></i>
+            </a>
+        </div>
+        <p style="font-size: 0.9rem;">&copy; 2026 MSARTS Marcenaria. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.5;">Made with Excellence in Woodcraft.</p>
     </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i data-lucide="message-circle"></i>
+    </a>
 
     <!-- Banner LGPD -->
     <div id="cookie-banner" class="cookie-banner">
