@@ -3,6 +3,8 @@ services:
     build: .
     container_name: msarts-app
     restart: always
+    volumes:
+      - ./public:/app/public # Mapeia a pasta local da VM para dentro do container
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.msarts.rule=Host(`msarts.routerkencarv.duckdns.org`)"
