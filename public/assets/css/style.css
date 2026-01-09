@@ -106,10 +106,30 @@ nav.scrolled {
 .nav-links {
     display: flex;
     gap: 40px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white; /* Cor inicial no Hero */
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Quando der scroll, a navbar fica branca e os links escuros */
+nav.scrolled .nav-links a {
+    color: var(--text);
 }
 
 .nav-links a:hover {
-    color: var(--secondary);
+    color: var(--secondary) !important;
+}
+
+nav.scrolled .logo {
+    color: var(--text);
+}
+
+nav .logo {
+    color: white;
 }
 
 /* Buttons */
