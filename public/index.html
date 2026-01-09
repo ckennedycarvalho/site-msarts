@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSARTS | Marcenaria de Alto Padrão em Móveis Planejados</title>
+    <meta name="description" content="Móveis planejados sob medida com sofisticação e qualidade incomparável. Solicite seu orçamento personalizado.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav id="navbar">
+        <div class="logo">MSARTS</div>
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Orçamento</a></li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="section-subtitle" style="color: white;">Excelência em cada detalhe</p>
+            <h1>Artesanato que <br> Inspira Ambientes</h1>
+            <p>Móveis planejados de alto padrão para quem valoriza a sofisticação e a exclusividade.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn btn-outline" style="border-color: white; color: white;">Ver Projetos</a>
+                <a href="#contato" class="btn btn-primary">Começar meu Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <div class="quote-container" style="align-items: center;">
+                <div>
+                    <img src="assets/img/hero.png" alt="Oficina" style="box-shadow: 40px -40px 0 var(--accent);">
+                </div>
+                <div>
+                    <p class="section-subtitle">Nossa Essência</p>
+                    <h2 class="section-title" style="text-align: left;">Tradição Encontra o Design Moderno</h2>
+                    <p>Na <strong>MSARTS</strong>, transformamos madeira em arte. Cada projeto é único, desenhado para refletir a personalidade de nossos clientes e as necessidades de cada ambiente. Utilizamos as melhores matérias-primas e técnicas de marcenaria fina para garantir durabilidade e conforto.</p>
+                    <br>
+                    <ul style="display: grid; gap: 15px;">
+                        <li><i data-lucide="check-circle" style="color: var(--secondary); margin-right: 10px; vertical-align: middle;"></i> Matéria-prima de fontes sustentáveis</li>
+                        <li><i data-lucide="check-circle" style="color: var(--secondary); margin-right: 10px; vertical-align: middle;"></i> Acabamento impecável feito à mão</li>
+                        <li><i data-lucide="check-circle" style="color: var(--secondary); margin-right: 10px; vertical-align: middle;"></i> Layouts inteligentes e funcionais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio" style="background: var(--white);">
+        <div class="container">
+            <p class="section-subtitle">Obras Recentes</p>
+            <h2 class="section-title">Nossas Inspirações</h2>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="assets/img/portfolio1.png" alt="Home Theater Planejado">
+                    <div class="portfolio-info">
+                        <h3>Home Theater Walnut</h3>
+                        <p>Sala de estar integrada com iluminação indireta.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/img/portfolio2.png" alt="Cozinha Planejada Minimalista">
+                    <div class="portfolio-info">
+                        <h3>Cozinha Minimal Oak</h3>
+                        <p>Linha clean com puxadores esculpidos na própria madeira.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orçamento -->
+    <section id="contato" class="quote-section">
+        <div class="container">
+            <div class="quote-container">
+                <div>
+                    <h2 class="section-title" style="text-align: left;">Dê Vida ao seu <br>Sonho hoje.</h2>
+                    <p>Preencha os dados abaixo e entraremos em contato para uma consultoria personalizada.</p>
+                    <br>
+                    <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
+                        <i data-lucide="phone" style="color: var(--secondary);"></i>
+                        <span>+55 (11) 99999-9999</span>
+                    </div>
+                    <div style="display: flex; gap: 20px; align-items: center; margin-top: 15px;">
+                        <i data-lucide="mail" style="color: var(--secondary);"></i>
+                        <span>contato@msarts.com.br</span>
+                    </div>
+                </div>
+                <form id="quote-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Como podemos te chamar?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Para enviarmos a proposta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Tipo de Projeto</label>
+                        <select id="project" style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: inherit;">
+                            <option value="cozinha">Cozinha Planejada</option>
+                            <option value="quarto">Dormitórios</option>
+                            <option value="sala">Home Theater / Sala</option>
+                            <option value="comercial">Ambientes Comerciais</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Conte-nos sobre sua ideia</label>
+                        <textarea id="message" rows="5" placeholder="Descreva brevemente o que você busca..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitação</button>
+                    <p style="font-size: 0.8rem; margin-top: 15px; color: var(--text-light);">* Ao enviar, você concorda com nossa <a href="politica-privacidade.html" style="text-decoration: underline;">Política de Privacidade</a> conforme a LGPD.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 50px 5%; background: var(--primary); color: rgba(255,255,255,0.6); text-align: center;">
+        <div class="logo" style="color: white; margin-bottom: 20px;">MSARTS</div>
+        <p>&copy; 2026 MSARTS Marcenaria. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Banner LGPD -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Utilizamos cookies para personalizar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-privacidade.html" style="color: var(--secondary); text-decoration: underline;">Política de Privacidade</a>.</p>
+        <button id="accept-cookies" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.7rem; background: var(--secondary);">Aceitar</button>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
