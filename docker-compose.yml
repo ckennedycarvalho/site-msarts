@@ -5,7 +5,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.msarts.rule=Host(`seu-dominio.com.br`)"
+      - "traefik.http.routers.msarts.rule=Host(`msarts.routerkencarv.duckdns.org`)"
       - "traefik.http.routers.msarts.entrypoints=websecure"
       - "traefik.http.routers.msarts.tls.certresolver=myresolver"
       - "traefik.http.services.msarts.loadbalancer.server.port=3000"
@@ -14,8 +14,8 @@ services:
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_KEY=${SUPABASE_KEY}
     networks:
-      - traefik-proxy
+      - traefik
 
 networks:
-  traefik-proxy:
+  traefik:
     external: true
