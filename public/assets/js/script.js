@@ -33,8 +33,10 @@ quoteForm.addEventListener('submit', (e) => {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         project: document.getElementById('project').value,
-        message: document.getElementById('message').value
+        message: document.getElementById('message').value,
+        _honeypot: document.querySelector('input[name="_honeypot"]').value
     };
+
 
     // Real API Call to Node.js backend
     const submitBtn = quoteForm.querySelector('button');
